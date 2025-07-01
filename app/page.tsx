@@ -1,16 +1,16 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import Projects from '@/components/Projects';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans antialiased">
+    <>
       <Header />
-      <main>
+      <main className="container mx-auto px-4 sm:px-12">
         <Hero />
         <About />
         <Services />
@@ -18,6 +18,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

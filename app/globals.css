@@ -1,11 +1,26 @@
-/* If you have a font import, it goes here */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles, using Tailwind apply: */
+/* Add these custom styles */
+@layer base {
+  :root {
+    --background: #101a23; /* Dark blue-gray background */
+    --card: #14202b; /* Slightly lighter card background */
+    --text-primary: #ffffff;
+    --text-secondary: #90adcb; /* Muted light blue for paragraphs */
+    --accent-blue: #0c7ff2;
+    --accent-pink: #d946ef;
+    
+    /* Other accent colors from your design */
+    --accent-green: #34d399;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --accent-teal: #14b8a6;
+  }
+}
+
 body {
-    @apply bg-gray-950 text-white; /* Use a standard Tailwind color for now to confirm it works */
+  color: var(--text-primary);
+  background: var(--background);
 }

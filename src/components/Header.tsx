@@ -1,18 +1,27 @@
+// src/components/Header.tsx
 import React from 'react';
+import GooeyNav from './GooeyNav';
 
 const Header = () => {
+  const navItems = [
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 bg-gray-950 bg-opacity-90 backdrop-blur-sm p-4 shadow-lg">
-      <nav className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-teal-400">Damn July</div>
-        <ul className="flex space-x-6">
-          <li><a href="#hero" className="hover:text-teal-300 transition duration-300">Home</a></li>
-          <li><a href="#services" className="hover:text-teal-300 transition duration-300">Services</a></li>
-          <li><a href="#projects" className="hover:text-teal-300 transition duration-300">Projects</a></li>
-          <li><a href="#contact" className="hover:text-teal-300 transition duration-300">Contact</a></li>
-        </ul>
+    <header className="flex items-center justify-between whitespace-nowrap px-10 py-5">
+      <div className="flex items-center gap-3">
+        {/* You can add an SVG logo here if you have one */}
+        <h2 className="text-white text-xl font-bold">DAMN LABS</h2>
+      </div>
+      <nav>
+        {/* Your awesome GooeyNav component! */}
+        <GooeyNav items={navItems} />
       </nav>
     </header>
   );
 };
-export default Header; // <--- THIS LINE IS ESSENTIAL
+
+export default Header;
